@@ -1,0 +1,17 @@
+{
+  "name": "pdf-translator",
+  "version": "1.0.0",
+  "description": "a pdf translator",
+  "main": "translatePdf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "faiz khan",
+  "license": "ISC",
+  "dependencies": {
+    "@vitalets/google-translate-api": "^9.2.0",
+    "fontkit": "^2.0.2",
+    "pdf-lib": "^1.17.1",
+    "pdf-parse": "^1.1.1"
+  }
+}
