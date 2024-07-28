@@ -65,6 +65,7 @@ async function createTranslatedPdf(
 async function main() {
   const originalFilePath = "./demo_123.pdf"; // Updated with your file path
   const outputFilePath = "./demo_123_translated.pdf"; // Updated with your desired output file path
+  const translatedTextFilePath = "./translated.txt"; // Path for the translated text file
 
   try {
     // Step 1: Extract text from PDF
@@ -75,7 +76,11 @@ async function main() {
     const translatedText = await translateText(extractedText);
     console.log("Translated Text:", translatedText);
 
-    // Step 3: Create new PDF with translated text
+    // Step 3: Save translated text to a .txt file
+    fs.writeFileSync(translatedTextFilePath, translatedText);
+    console.log("Translated text saved to:", translatedTextFilePath);
+
+    // Step 4: Create new PDF with translated text
     await createTranslatedPdf(originalFilePath, translatedText, outputFilePath);
     console.log("Translated PDF created successfully:", outputFilePath);
   } catch (error) {

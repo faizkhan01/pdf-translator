@@ -4,14 +4,17 @@
   "description": "a pdf translator",
   "main": "translatePdf.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node translatePdf.js"
   },
   "author": "faiz khan",
   "license": "ISC",
   "dependencies": {
+    "@pdf-lib/fontkit": "^1.1.1",
     "@vitalets/google-translate-api": "^9.2.0",
     "fontkit": "^2.0.2",
     "pdf-lib": "^1.17.1",
-    "pdf-parse": "^1.1.1"
+    "pdf-parse": "^1.1.1",
+    "pdf2table": "^0.0.2"
   }
 }
